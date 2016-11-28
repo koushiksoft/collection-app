@@ -1,0 +1,12 @@
+<div class="row">
+	<div class="col-xl-12">
+		<ul class="list-group" *ngIf="collectedItem.length > 0">
+			<li class="list-group-item" *ngFor="let item of collectedItem">
+				<span class="badge">{{item.type}}</span>
+				<button class="btn btn-danger" (click)="onRemoveFromCollection(item)"> Remove from the collection</button>&nbsp;
+				{{item.message}}
+			</li>
+		</ul>
+		<h4 *ngIf="collectedItem.length ===0"> Please add some items into cart!</h4>
+	</div>
+</div>
